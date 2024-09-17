@@ -1,12 +1,8 @@
-from typing import Any, Mapping
+from typing import Any
 
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.core.files.base import File
-from django.db.models.base import Model
-from django.forms.utils import ErrorList
-from django.forms.widgets import PasswordInput, TextInput
 
 User = get_user_model()
 
