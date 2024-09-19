@@ -27,7 +27,8 @@ urlpatterns = [
     path("shop/", include("shop.urls", namespace="shop")),
     path("cart/", include("cart.urls", namespace="cart")),
     path("account/", include("account.urls", namespace="account")),
-    path('email/', include(email_urls), name='email-verification'),
+    path("payment/", include("payment.urls", namespace="payment")),
+    path("email/", include(email_urls), name="email-verification"),
 ]
 
 if settings.DEBUG:

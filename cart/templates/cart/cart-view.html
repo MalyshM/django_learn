@@ -1,4 +1,4 @@
-{% include "base.html" %} {% load mathfilters %} {% load static %} {% block content %}
+{% include "base.html" %} {% load static %} {% load mathfilters %} {% block content %}
 
 <main class="pt-5">
   <div class="container">
@@ -8,8 +8,7 @@
 
     {% for item in cart %}
     {% with product=item.product %}
-  
-
+    
 
     <br />
 
@@ -81,21 +80,38 @@
                 >
                   Delete
                 </button>
-              </div>
+
+                
+              </div> 
+      
+              
             </div>
+            
           </div>
+          
         </div>
+        
       </div>
+      
     </div>
+
     {% endwith %}
     {% endfor %}
+    
     <div class="col-12 text-end">
       <div class="h6 fw-bold">
         Total: $
         <div id="total" class="d-inline-flex">
-            {{cart.get_total_price}}
+          {{ cart.get_total_price }}
         </div>
       </div>
+      <button
+                  type="button"
+                  class="btn btn-success btn-md text-bg-light mt-4"
+            
+                >
+                <a class="nav-link text-decoration-none" href="{% url 'payment:checkout' %}">Checkout</a>
+                </button>
     </div>
   </div>
 
