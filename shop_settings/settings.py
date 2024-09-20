@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # third party libraries
+    "sorl.thumbnail",
     "django_google_fonts",
     "mathfilters",
     "crispy_forms",
