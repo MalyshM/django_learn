@@ -1,4 +1,5 @@
 from django import forms
+
 from .models import ShippingAddress
 
 
@@ -8,10 +9,9 @@ class ShippingAddressForm(forms.ModelForm):
         fields = [
             "full_name",
             "email",
-            "street_adress",
-            "apartment_adress",
+            "street_address",
+            "apartment_address",
             "country",
-            "city",
-            "zip_code",
+            "zip",
         ]
         exclude = ["user"]

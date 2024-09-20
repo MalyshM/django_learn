@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.auth import get_user_model
+from django.db import models
 
 from shop.models import Product
 
@@ -7,19 +7,24 @@ User = get_user_model()
 
 
 class ShippingAddress(models.Model):
-    full_name = models.CharField(max_length=250)
-    email = models.EmailField(verbose_name="email address", max_length=254)
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
 
-    street_adress = models.CharField(max_length=100)
-    apartment_adress = models.CharField(max_length=100)
+    street_address = models.CharField(max_length=100)
+    apartment_address = models.CharField(max_length=100)
 
-    city = models.CharField(max_length=100, blank=True, null=True)
     country = models.CharField(max_length=100, blank=True, null=True)
-    zip_code = models.CharField(max_length=100, blank=True, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    zip = models.CharField(max_length=100, blank=True, null=True)
+
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, blank=True, null=True
+    )
+
+    # address_type = models.CharField(max_length=1, choices=(('B', 'Billing'), ('S', 'Shipping')))
+    # default = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Shipping Address object: {str(self.id)}"
+        return "Shipping Address" + str(self.id)
 
 
 class Order(models.Model):
