@@ -180,7 +180,7 @@ GOOGLE_FONTS = ["Montserrat:wght@300,400", "Roboto"]
 GOOGLE_FONTS_DIR = BASE_DIR / "static"
 
 # Celery
-CELERY_BROKER_URL = "redis://localhost:6379"
+CELERY_BROKER_URL = "redis://localhost:6380"
 CELERY_RESULT_BACKEND = "django-db"
 CELERY_RESULT_EXTENDED = True
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
