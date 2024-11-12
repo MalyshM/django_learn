@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "django_email_verification",
     "django_celery_beat",
     "django_celery_results",
+    "django_htmx",
     # apps
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
