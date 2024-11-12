@@ -19,8 +19,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "brand",
-        "slug",
         "price",
+        "discount",
         "available",
         "created_at",
         "updated_at",
