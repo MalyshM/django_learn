@@ -1,7 +1,6 @@
 # Custom
-/media
+*/media
 .env
-/static
 */migrations
 # Byte-compiled / optimized / DLL files
 __pycache__/
